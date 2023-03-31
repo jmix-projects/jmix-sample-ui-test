@@ -21,7 +21,7 @@ In order to run all tests from the command line, use the `test` Gradle task:
     gradlew test
 ```
 
-Based on Jmix 1.0.1
+Based on Jmix 1.5.0
 
 ## Issues
 Please use https://forum.jmix.io/ for discussion, support, and reporting problems corresponding to this sample.

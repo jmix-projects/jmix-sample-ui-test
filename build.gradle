@@ -1,12 +1,12 @@
 plugins {
-    id 'io.jmix' version '1.0.2'
+    id 'io.jmix' version '1.5.0'
     id 'java'
 }
 
 apply plugin: 'org.springframework.boot'
 
 jmix {
-    bomVersion = '1.0.1' 
+    bomVersion = '1.5.0'
 }
 
 group = 'com.company'
@@ -14,10 +14,10 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
-    mavenCentral() 
+    mavenCentral()
     maven {
         url 'https://global.repo.jmix.io/repository/public'
-    } 
+    }
 }
 
 dependencies {
@@ -47,8 +47,8 @@ dependencies {
     }
 
     // the library for the UI testing
-    testImplementation 'com.codeborne:selenide:5.20.1'
-    testImplementation 'io.jmix.masquerade:jmix-masquerade:1.0.0'
+    testImplementation 'com.codeborne:selenide:6.12.4'
+    testImplementation 'io.jmix.masquerade:jmix-masquerade:1.2.0'
 }
 
 test {

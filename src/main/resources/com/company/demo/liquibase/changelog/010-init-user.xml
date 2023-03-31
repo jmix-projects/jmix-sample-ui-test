@@ -5,7 +5,9 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <changeSet id="1" author="jmix-sample-ui-test">
+    <!-- DO NOT REMOVE. This changelog is required for user management. -->
+
+    <changeSet id="1" author="jmix-sample-ui-test" context="!cuba">
 
         <createTable tableName="USER_">
             <column name="ID" type="${uuid.type}">
@@ -22,18 +24,19 @@
             <column name="PASSWORD" type="varchar(255)"/>
             <column name="EMAIL" type="varchar(255)"/>
             <column name="ACTIVE" type="boolean"/>
+            <column name="TIME_ZONE_ID" type="VARCHAR(255)"/>
         </createTable>
 
     </changeSet>
 
-    <changeSet id="2" author="jmix-sample-ui-test">
+    <changeSet id="2" author="jmix-sample-ui-test" context="!cuba">
         <createIndex indexName="IDX_USER__ON_USERNAME"
                      tableName="USER_" unique="true">
             <column name="USERNAME"/>
         </createIndex>
     </changeSet>
 
-    <changeSet id="3" author="jmix-sample-ui-test">
+    <changeSet id="3" author="jmix-sample-ui-test" context="!cuba">
 
         <insert tableName="USER_" dbms="postgresql, mssql, hsqldb">
             <column name="ID" value="60885987-1b61-4247-94c7-dff348347f93"/>
@@ -53,7 +56,7 @@
 
     </changeSet>
 
-    <changeSet id="4" author="jmix-sample-ui-test">
+    <changeSet id="4" author="jmix-sample-ui-test" context="!cuba">
 
         <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
             <column name="ID" value="6c9e420a-2b7a-4c42-8654-a9027ee14083"/>
